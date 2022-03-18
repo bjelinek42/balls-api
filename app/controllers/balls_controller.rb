@@ -17,8 +17,16 @@ class BallsController < ApplicationController
   end
 
   def update
+    ball = Ball.find_by(id: params[:id])
+    ball.name = params[:name]
+    ball.size = params[:size]
+    ball.price = params[:price]
+    ball.save
+    render json: ball
   end
 
-  def delete
+  def destroy
+    ball = Ball.find_by(id: params[:id])
+    ball.delete
   end
 end
