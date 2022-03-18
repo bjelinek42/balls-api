@@ -10,7 +10,7 @@ class SuppliersController < ApplicationController
   end
 
   def create
-    supplier = Supplier.new({name: params[:name], size: params[:email], price: params[:phone]})
+    supplier = Supplier.new({name: params[:name], email: params[:email], phone: params[:phone]})
     if supplier.save
       render json: supplier
     else
@@ -21,8 +21,8 @@ class SuppliersController < ApplicationController
   def update
     supplier = Supplier.find_by(id: params[:id])
     supplier.name = params[:name]
-    supplier.size = params[:email]
-    supplier.price = params[:phone]
+    supplier.email = params[:email]
+    supplier.phone = params[:phone]
     if supplier.save
       render json: supplier
     else

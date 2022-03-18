@@ -11,7 +11,12 @@ class BallsController < ApplicationController
   end
 
   def create
-    ball = Ball.new({name: params[:name], size: params[:size], price: params[:price]})
+    ball = Ball.new({
+      name: params[:name], 
+      size: params[:size], 
+      price: params[:price], 
+      color: params[:color],
+      supplier_id: params[:supplier_id]})
     if ball.save
       render json: ball
     else
@@ -21,9 +26,11 @@ class BallsController < ApplicationController
 
   def update
     ball = Ball.find_by(id: params[:id])
-    ball.name = params[:name]
-    ball.size = params[:size]
-    ball.price = params[:price]
+    ball.name = params[:name] || ball.name
+    ball.size = params[:size] || ball.size
+    ball.price = params[:price] || ball.price
+    ball.color = params[:color] || ball.color
+    ball.color = params[:supplier_id] || ball.color
     if ball.save
       render json: ball
     else

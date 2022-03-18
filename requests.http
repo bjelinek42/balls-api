@@ -26,3 +26,33 @@ content-type: application/json
 
 ###
 DELETE http://localhost:3000/balls/9
+
+**********************************
+###
+GET http://localhost:3000/suppliers
+
+###
+GET http://localhost:3000/suppliers/3
+
+###
+POST http://localhost:3000/suppliers
+content-type: application/json
+
+{
+  "name": "Racketballs",
+  "email": "S",
+  "phone": 5
+}
+
+###
+PATCH http://localhost:3000/suppliers/4
+content-type: application/json
+
+{
+  "name": "Racketballs",
+  "email": "S",
+  "phone": 5
+}
+
+###
+DELETE http://localhost:3000/suppliers/4
