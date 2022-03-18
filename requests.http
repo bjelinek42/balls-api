@@ -9,7 +9,7 @@ POST http://localhost:3000/balls
 content-type: application/json
 
 {
-  "name": "Racketball",
+  "name": "Racketballs",
   "size": "S",
   "price": 5
 }
@@ -19,10 +19,10 @@ PATCH http://localhost:3000/balls/6
 content-type: application/json
 
 {
-  "name": "Volleyball",
-  "size": "M",
-  "price": 15
+  "name": "Racketballs",
+  "size": "S",
+  "price": 5
 }
 
 ###
-DELETE http://localhost:3000/balls/8
+DELETE http://localhost:3000/balls/9
