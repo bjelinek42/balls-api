@@ -6,6 +6,13 @@ GET http://localhost:3000/balls/3
 
 ###
 POST http://localhost:3000/balls
+content-type: application/json
+
+{
+  "name": "Racketball",
+  "size": "S",
+  "price": 5
+}
 
 ###
 PATCH http://localhost:3000/balls
