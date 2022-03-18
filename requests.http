@@ -1,0 +1,14 @@
+###
+GET http://localhost:3000/balls
+
+###
+GET http://localhost:3000/balls/3
+
+###
+POST http://localhost:3000/balls
+
+###
+PATCH http://localhost:3000/balls
+
+###
+DELETE http://localhost:3000/balls
