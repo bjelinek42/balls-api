@@ -6,17 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-ball = Ball.new({name: "Basketball", size: "M", price: 20})
-ball.save
+supplier = Supplier.new({name: "Dicks", email: "info@icks.com", phone: "203-765-3583"})
+supplier.save
 
-ball = Ball.new({name: "Baseball", size: "S", price: 5})
-ball.save
+supplier = Supplier.new({name: "Scheels", email: "info@scheels.com", phone: "553-752-2345"})
+supplier.save
 
-ball = Ball.new({name: "Football", size: "S", price: 12})
-ball.save
-
-ball = Ball.new({name: "Tennis Ball", size: "S", price: 3})
-ball.save
-
-ball = Ball.new({name: "Medicine Ball", size: "L", price: 35})
-ball.save
+supplier = Supplier.new({name: "Big 5", email: "info@big5.com", phone: "125-253-2532"})
+supplier.save
