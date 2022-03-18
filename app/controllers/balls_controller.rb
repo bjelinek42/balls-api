@@ -12,8 +12,11 @@ class BallsController < ApplicationController
 
   def create
     ball = Ball.new({name: params[:name], size: params[:size], price: params[:price]})
-    ball.save
-    render json: ball
+    if ball.save
+      render json: ball
+    else
+      render json: ball.errors.full_messages
+    end
   end
 
   def update
@@ -21,8 +24,11 @@ class BallsController < ApplicationController
     ball.name = params[:name]
     ball.size = params[:size]
     ball.price = params[:price]
-    ball.save
-    render json: ball
+    if ball.save
+      render json: ball
+    else
+      render json: ball.errors.full_messages
+    end
   end
 
   def destroy
