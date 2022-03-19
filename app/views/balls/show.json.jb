@@ -1,0 +1,7 @@
+{
+  id: @ball.id,
+  name: @ball.name,
+  color: @ball.color,
+  size: @ball.size,
+  supplier: @ball.supplier[:name]
+}
