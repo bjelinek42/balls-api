@@ -1,26 +1,26 @@
 class BallsController < ApplicationController
 
   def index
-    @ball = Ball.all
-    render template: "balls/index"
+    ball = Ball.all
+    render json: ball
   end
 
   def show
-    @ball = Ball.find_by(id: params[:id])
-    render template: "balls/show"
+    ball = Ball.find_by(id: params[:id])
+    render json: ball
   end
 
   def create
-    @ball = Ball.new({
+    ball = Ball.new({
       name: params[:name], 
       size: params[:size], 
       price: params[:price], 
       color: params[:color],
       supplier_id: params[:supplier_id]})
-    if @ball.save
-      render template: "balls/show"
+    if ball.save
+      render json: ball
     else
-      render json: @ball.errors.full_messages
+      render json: ball.errors.full_messages
     end
   end
 

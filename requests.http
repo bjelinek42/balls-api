@@ -1,5 +1,5 @@
 ###
-GET http://localhost:3000/balls.json
+GET http://localhost:3000/balls
 
 ###
 GET http://localhost:3000/balls/3.json
